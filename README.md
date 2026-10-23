@@ -1,6 +1,687 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Meu primeiro site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Revista Macedo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
+<body>
+<div class="site-shell">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#" class="school-brand" data-go-home>
+        <img src="https://i.ibb.co/gMFcfqX3/168174-03cb609675894309aa22c54c0880fd79-mv2.jpg" alt="Logo do Colégio Cívico-Militar Vila Macedo" class="school-logo">
+        <div class="school-name">
+          <span>Colégio Cívico-Militar</span>
+          <strong>Vila Macedo</strong>
+        </div>
+      </a>
+
+      <div class="magazine-brand">
+        <span>Revista</span>
+        <strong>Macedo</strong>
+      </div>
+
+      <button class="mobile-menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+
+      <nav class="main-nav" aria-label="Navegação principal">
+        <button data-open-page="home">Início</button>
+        <button data-open-page="sociologia">Sociologia</button>
+        <button data-open-page="historia">História</button>
+        <button data-open-page="matematica">Matemática</button>
+        <button data-open-page="filosofia">Filosofia</button>
+        <button data-open-page="artes">Artes</button>
+        <button data-open-page="portugues">Português</button>
+        <button data-open-page="meioambiente">Educação Ambiental</button>
+        <button data-open-page="robotica">Robótica</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- PÁGINA INICIAL -->
+    <section id="home-view" class="page-view active">
+      <div class="edition-strip">EDIÇÃO ESCOLAR • 2026</div>
+
+      <div class="masthead">
+        <div class="cover-grid">
+          <div class="cover-photo">
+            <img src="https://images.pexels.com/photos/256395/pexels-photo-256395.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Ambiente escolar">
+          </div>
+
+          <div class="cover-copy">
+            <span class="eyebrow">Produções dos estudantes</span>
+            <h1>Revista<br><em>Macedo</em></h1>
+            <p>Um espaço para apresentar produções, projetos, pesquisas e experiências desenvolvidas pelos estudantes do Colégio Cívico-Militar Vila Macedo.</p>
+            <div class="issue-seal">
+              <strong>2026</strong>
+              <span>EDIÇÃO</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="editorial-section">
+        <div class="editorial-heading">
+          <span class="eyebrow">Nesta edição</span>
+          <h2>Conhecimento em movimento</h2>
+          <div class="editorial-rule"></div>
+          <p>A Revista Macedo reúne trabalhos realizados em diferentes componentes curriculares, valorizando a criatividade, a pesquisa, a reflexão e a produção dos estudantes.</p>
+        </div>
+
+        <div class="feature-grid">
+
+          <article class="article-card">
+            <div class="article-photo">
+              <img src="https://images.pexels.com/photos/36681981/pexels-photo-36681981.jpeg" alt="Sociologia" loading="lazy">
+            </div>
+            <span class="article-number">01</span>
+            <h3>Sociologia</h3>
+            <p>Produções e reflexões sobre sociedade, cultura, política e pensamento social.</p>
+            <button class="read-link" data-open-page="sociologia">Ler produção →</button>
+          </article>
+
+          <article class="article-card">
+            <div class="article-photo">
+              <img src="https://images.pexels.com/photos/17543458/pexels-photo-17543458.jpeg" alt="História" loading="lazy">
+            </div>
+            <span class="article-number">02</span>
+            <h3>História</h3>
+            <p>Pesquisas e atividades sobre a história, o território e a identidade do Paraná.</p>
+            <button class="read-link" data-open-page="historia">Ler produção →</button>
+          </article>
+
+          <article class="article-card">
+            <div class="article-photo">
+              <img src="https://i.ibb.co/xKPFSSNN/Whats-App-Image-2026-10-23-at-09-41-30.jpg" alt="Filosofia" loading="lazy">
+            </div>
+            <span class="article-number">03</span>
+            <h3>Filosofia</h3>
+            <p>Pesquisa de intelectuais de diferentes países e reflexão sobre ideias e culturas.</p>
+            <button class="read-link" data-open-page="filosofia">Ler produção →</button>
+          </article>
+
+          <article class="article-card">
+            <div class="article-photo">
+              <img src="https://i.ibb.co/HLn6zPxg/Whats-App-Image-2026-09-10-at-09-03-53.jpg" alt="Artes" loading="lazy">
+            </div>
+            <span class="article-number">04</span>
+            <h3>Artes</h3>
+            <p>Mosaico, arte paranaense e produções visuais dos estudantes.</p>
+            <button class="read-link" data-open-page="artes">Ler produção →</button>
+          </article>
+
+          <article class="article-card">
+            <div class="article-photo">
+              <img src="https://i.ibb.co/JwRjy8pL/trabalho-literatura.png" alt="Língua Portuguesa" loading="lazy">
+            </div>
+            <span class="article-number">05</span>
+            <h3>Português</h3>
+            <p>Literatura, leitura, escrita e produção textual.</p>
+            <button class="read-link" data-open-page="portugues">Ler produção →</button>
+          </article>
+
+          <article class="article-card">
+            <div class="article-photo">
+              <img src="https://i.ibb.co/chCMck2s/Whats-App-Image-2026-10-23-at-08-38-45.jpg" alt="Cartaz sobre água virtual" loading="lazy">
+            </div>
+            <span class="article-number">06</span>
+            <h3>Matemática</h3>
+            <p>Resolução de problemas, gráficos e investigação sobre consumo de água e água virtual.</p>
+            <button class="read-link" data-open-page="matematica">Ler produção →</button>
+          </article>
+
+          <article class="article-card">
+            <div class="article-photo">
+              <img src="https://i.ibb.co/Sw4jCrPh/Whats-App-Image-2026-10-23-at-08-39-35.jpg" alt="Estufa experimental" loading="lazy">
+            </div>
+            <span class="article-number">07</span>
+            <h3>Educação Ambiental</h3>
+            <p>Uma estufa experimental para investigar o aquecimento, o efeito estufa e o aquecimento global.</p>
+            <button class="read-link" data-open-page="meioambiente">Ler produção →</button>
+          </article>
+
+          <article class="article-card">
+            <div class="article-photo">
+              <img src="https://images.pexels.com/photos/8566473/pexels-photo-8566473.jpeg" alt="Robótica educacional" loading="lazy">
+            </div>
+            <span class="article-number">08</span>
+            <h3>Robótica</h3>
+            <p>Tecnologia, programação e projetos de acessibilidade desenvolvidos pelos estudantes.</p>
+            <button class="read-link" data-open-page="robotica">Ler produção →</button>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SOCIOLOGIA -->
+    <section id="sociologia-view" class="page-view">
+      <div class="inside-head">
+        <span class="eyebrow">Revista Macedo</span>
+        <h1>Sociologia</h1>
+        <p>Produções realizadas pelos estudantes nas aulas de Sociologia.</p>
+      </div>
+
+      <div class="instagram-feed">
+        <article class="instagram-card">
+          <div class="instagram-header">
+            <div class="instagram-avatar"><span>SO</span></div>
+            <div class="instagram-user">
+              <strong>sociologia.macedo</strong>
+              <span>Colégio Vila Macedo</span>
+            </div>
+            <span class="instagram-dots">•••</span>
+          </div>
+
+          <div class="instagram-carousel">
+            <button class="carousel-button carousel-prev" type="button" aria-label="Imagem anterior">‹</button>
+            <div class="carousel-track">
+              <img src="https://i.ibb.co/Z0CLr10/SOCIOLOGIA-3.png" alt="Produção de Sociologia 1" class="carousel-image active" loading="lazy">
+              <img src="https://i.ibb.co/B2YC048W/SOCIOLOGIA-2.png" alt="Produção de Sociologia 2" class="carousel-image" loading="lazy">
+              <img src="https://i.ibb.co/r2LFLQMv/SOCIOLOGIA-1.png" alt="Produção de Sociologia 3" class="carousel-image" loading="lazy">
+              <img src="https://i.ibb.co/CKSJ26V0/SOCIOLOGIA.png" alt="Produção de Sociologia 4" class="carousel-image" loading="lazy">
+            </div>
+            <button class="carousel-button carousel-next" type="button" aria-label="Próxima imagem">›</button>
+          </div>
+
+          <div class="instagram-footer">
+            <div class="instagram-actions"><span>♡</span><span>♡</span><span>⌁</span><span class="bookmark">♡</span></div>
+            <div class="instagram-dots-indicator"></div>
+            <p class="instagram-likes">Produções dos estudantes</p>
+            <p class="instagram-caption"><strong>sociologia.macedo</strong> Atividade desenvolvida nas aulas de Sociologia.</p>
+            <span class="instagram-date">EDIÇÃO 2026</span>
+          </div>
+        </article>
+      </div>
+
+      <button class="back-button" data-go-home>← Voltar para a revista</button>
+    </section>
+
+    <!-- HISTÓRIA -->
+    <section id="historia-view" class="page-view">
+      <div class="inside-head">
+        <span class="eyebrow">Projeto interdisciplinar • História, Geografia e Arte</span>
+        <h1>Território e Identidade</h1>
+        <p>As Marcas do Paraná</p>
+      </div>
+
+      <div class="content-copy">
+        <h2>Território e Identidade: As Marcas do Paraná</h2>
+        <p>Trabalhar o Paraná sob múltiplos olhares permite que o estudante perceba que a História não acontece no vazio: ela ocupa um espaço geográfico e se expressa através do olhar sensível da Arte. Com essa proposta, o projeto interdisciplinar une História, Geografia e Arte para investigar as raízes regionais, a imigração, a paisagem e as manifestações culturais do Estado do Paraná.</p>
+      </div>
+
+      <div class="instagram-feed">
+        <article class="instagram-card">
+          <div class="instagram-header">
+            <div class="instagram-avatar"><span>PR</span></div>
+            <div class="instagram-user">
+              <strong>Território e Identidade</strong>
+              <span>As Marcas do Paraná • Revista Macedo</span>
+            </div>
+            <span class="instagram-dots">•••</span>
+          </div>
+
+          <div class="instagram-carousel">
+            <button class="carousel-button carousel-prev" type="button" aria-label="Imagem anterior">‹</button>
+            <div class="carousel-track">
+              <img src="https://i.ibb.co/ccn2Bn5Q/Whats-App-Image-2026-10-22-at-16-00-17.jpg" alt="Registro 1 do projeto" class="carousel-image active" loading="lazy">
+              <img src="https://i.ibb.co/d0GhDc56/Whats-App-Image-2026-10-22-at-16-00-17-1.jpg" alt="Registro 2 do projeto" class="carousel-image" loading="lazy">
+              <img src="https://i.ibb.co/Q7SV110Z/Whats-App-Image-2026-10-22-at-16-00-18.jpg" alt="Registro 3 do projeto" class="carousel-image" loading="lazy">
+              <img src="https://i.ibb.co/DSd9PNv/Whats-App-Image-2026-10-22-at-16-00-18-1.jpg" alt="Registro 4 do projeto" class="carousel-image" loading="lazy">
+              <img src="https://i.ibb.co/Bh6K300/Whats-App-Image-2026-10-22-at-16-00-18-2.jpg" alt="Registro 5 do projeto" class="carousel-image" loading="lazy">
+              <img src="https://i.ibb.co/NdFdXwQR/Whats-App-Image-2026-10-22-at-16-00-19.jpg" alt="Registro 6 do projeto" class="carousel-image" loading="lazy">
+              <img src="https://i.ibb.co/gZgjjkpx/Whats-App-Image-2026-10-22-at-16-11-33.jpg" alt="Registro 7 do projeto" class="carousel-image" loading="lazy">
+            </div>
+            <button class="carousel-button carousel-next" type="button" aria-label="Próxima imagem">›</button>
+          </div>
+
+          <div class="instagram-footer">
+            <div class="instagram-dots-indicator"></div>
+            <p class="instagram-caption">Projeto interdisciplinar que investiga as raízes regionais, a imigração, a paisagem e as manifestações culturais do Paraná.</p>
+          </div>
+        </article>
+      </div>
+
+      <button class="back-button" data-go-home>← Voltar para a revista</button>
+    </section>
+
+    <!-- MATEMÁTICA -->
+    <section id="matematica-view" class="page-view">
+      <div class="inside-head">
+        <span class="eyebrow">Resolução de problemas • Investigação • Sustentabilidade</span>
+        <h1>Matemática</h1>
+        <p>Consumo de água e o conceito de água virtual</p>
+      </div>
+
+      <div class="content-copy">
+        <h2>Quanto de água existe por trás do que consumimos?</h2>
+        <p>Na atividade de Resolução de Problemas e Matemática, os estudantes produziram cartazes sobre o consumo de água e o conceito de água virtual, utilizando gráficos, ilustrações e dados numéricos para comparar a quantidade de água utilizada na produção de diferentes alimentos e produtos. A proposta buscou desenvolver a interpretação de dados e a conscientização sobre o consumo responsável e a importância de evitar o desperdício de água.</p>
+      </div>
+
+      <div class="instagram-feed">
+        <article class="instagram-card">
+          <div class="instagram-header">
+            <div class="instagram-avatar"><span>MA</span></div>
+            <div class="instagram-user">
+              <strong>Matemática • Resolução de Problemas</strong>
+              <span>Revista Macedo • 2026</span>
+            </div>
+            <span class="instagram-dots">•••</span>
+          </div>
+
+          <div class="instagram-carousel">
+            <button class="carousel-button carousel-prev" type="button" aria-label="Imagem anterior">‹</button>
+            <div class="carousel-track">
+              <img src="https://i.ibb.co/chCMck2s/Whats-App-Image-2026-10-23-at-08-38-45.jpg" alt="Cartaz sobre água virtual" class="carousel-image active" loading="lazy">
+              <img src="https://i.ibb.co/DD9NB4hn/Whats-App-Image-2026-10-23-at-08-38-44-3.jpg" alt="Cartaz sobre consumo de água 2" class="carousel-image" loading="lazy">
+              <img src="https://i.ibb.co/PvXjLNHs/Whats-App-Image-2026-10-23-at-08-38-44-2.jpg" alt="Cartaz sobre consumo de água 3" class="carousel-image" loading="lazy">
+              <img src="https://i.ibb.co/DHVjGxKY/Whats-App-Image-2026-10-23-at-08-38-44-1.jpg" alt="Cartaz sobre consumo de água 4" class="carousel-image" loading="lazy">
+              <img src="https://i.ibb.co/mCHsDzny/Whats-App-Image-2026-10-23-at-08-38-44.jpg" alt="Cartaz sobre consumo de água 5" class="carousel-image" loading="lazy">
+              <img src="https://i.ibb.co/1GG5zNj5/Whats-App-Image-2026-10-23-at-08-38-43-1.jpg" alt="Cartaz sobre consumo de água 6" class="carousel-image" loading="lazy">
+              <img src="https://i.ibb.co/wN1pzsgZ/Whats-App-Image-2026-10-23-at-08-38-43.jpg" alt="Cartaz sobre consumo de água 7" class="carousel-image" loading="lazy">
+            </div>
+            <button class="carousel-button carousel-next" type="button" aria-label="Próxima imagem">›</button>
+          </div>
+
+          <div class="instagram-footer">
+            <div class="instagram-dots-indicator"></div>
+            <p class="instagram-caption">Investigação matemática sobre o consumo de água, a água virtual e a interpretação de dados, relacionando os conhecimentos matemáticos às escolhas de consumo e à sustentabilidade.</p>
+            <span class="instagram-date">MATEMÁTICA • EDIÇÃO 2026</span>
+          </div>
+        </article>
+      </div>
+
+      <button class="back-button" data-go-home>← Voltar para a revista</button>
+    </section>
+
+    <!-- FILOSOFIA -->
+    <section id="filosofia-view" class="page-view">
+      <div class="inside-head">
+        <span class="eyebrow">Filosofia • Análise de Textos Filosóficos • Copa do Mundo 2026</span>
+        <h1>Filosofia</h1>
+        <p>Intelectuais, ideias e diferentes perspectivas culturais</p>
+      </div>
+
+      <div class="content-copy">
+        <h2>O pensamento intelectual pelo mundo</h2>
+        <p>Nas disciplinas de Filosofia e Análise de Textos Filosóficos, a turma foi dividida em grupos, cada um responsável por um dos grupos da Copa do Mundo de 2026. A atividade consistiu em pesquisar um intelectual de cada um dos quatro países do grupo, identificando suas principais ideias, contribuições e reflexões. A proposta buscou aproximar os estudantes do pensamento filosófico e intelectual de diferentes países, desenvolvendo a pesquisa, a leitura, a interpretação de textos e a compreensão de diferentes perspectivas culturais e sociais.</p>
+      </div>
+
+      <div class="instagram-feed">
+        <article class="instagram-card">
+          <div class="instagram-header">
+            <div class="instagram-avatar"><span>FI</span></div>
+            <div class="instagram-user">
+              <strong>Filosofia e Análise de Textos</strong>
+              <span>Revista Macedo • 2026</span>
+            </div>
+            <span class="instagram-dots">•••</span>
+          </div>
+
+          <div class="instagram-carousel">
+            <button class="carousel-button carousel-prev" type="button" aria-label="Imagem anterior">‹</button>
+            <div class="carousel-track">
+              <img src="https://i.ibb.co/wNRLRm96/Whats-App-Image-2026-10-23-at-09-41-29.jpg" alt="Registro da atividade de Filosofia 1" class="carousel-image active" loading="lazy">
+              <img src="https://i.ibb.co/r2hDrpy9/Whats-App-Image-2026-10-23-at-09-41-30-1.jpg" alt="Pesquisa sobre intelectuais 2" class="carousel-image" loading="lazy">
+              <img src="https://i.ibb.co/xKPFSSNN/Whats-App-Image-2026-10-23-at-09-41-30.jpg" alt="Produção da atividade de Filosofia 3" class="carousel-image" loading="lazy">
+              <img src="https://i.ibb.co/nshKHXsw/Whats-App-Image-2026-10-23-at-09-41-31-1.jpg" alt="Pesquisa sobre intelectuais 4" class="carousel-image" loading="lazy">
+              <img src="https://i.ibb.co/XHknj6d/Whats-App-Image-2026-10-23-at-09-41-31.jpg" alt="Registro da pesquisa interdisciplinar 5" class="carousel-image" loading="lazy">
+            </div>
+            <button class="carousel-button carousel-next" type="button" aria-label="Próxima imagem">›</button>
+          </div>
+
+          <div class="instagram-footer">
+            <div class="instagram-dots-indicator"></div>
+            <p class="instagram-caption">A pesquisa reuniu intelectuais de diferentes países para investigar ideias, contribuições e reflexões, relacionando o pensamento filosófico às realidades culturais e sociais.</p>
+            <span class="instagram-date">FILOSOFIA • EDIÇÃO 2026</span>
+          </div>
+        </article>
+      </div>
+
+      <button class="back-button" data-go-home>← Voltar para a revista</button>
+    </section>
+
+    <!-- ARTES -->
+    <section id="artes-view" class="page-view">
+      <div class="inside-head">
+        <span class="eyebrow">Revista Macedo</span>
+        <h1>Artes</h1>
+        <p>Mosaico, arte paranaense e produções dos estudantes.</p>
+      </div>
+
+      <div class="content-copy">
+        <p>O trabalho apresentado junto aos alunos foi direcionado a descobrir a arte do mosaico e conhecer artistas paranaenses que realizam essa técnica na execução de suas obras.</p>
+        <p>O mosaico é uma técnica de arte decorativa que consiste em montar figuras ou padrões geométricos combinando pequenos fragmentos de materiais — como pedra, azulejo, vidro ou cerâmica — colados e rejuntados sobre uma superfície.</p>
+        <p>No Paraná, essa linguagem ganhou forte expressão a partir do século XX, impulsionada pelo desejo de registrar a identidade e a história do estado no espaço urbano. Poty Lazzarotto destacou-se por seus murais que contam a trajetória do povo paranaense e marcam a paisagem de Curitiba e de diversas cidades.</p>
+        <p>Ao lado dele, artistas e mestres calceteiros ajudaram a popularizar o mosaico português nas calçadas da capital, desenhando símbolos locais como a gralha-azul, o pinhão e a araucária. Os trabalhos a seguir foram inspirados em elementos representativos do Paraná e em lugares turísticos, abrindo espaço para outros temas escolhidos pelos estudantes.</p>
+      </div>
+
+      <div class="mosaic-gallery">
+        <img src="https://i.ibb.co/HLn6zPxg/Whats-App-Image-2026-09-10-at-09-03-53.jpg" alt="Trabalho de mosaico 1" class="mosaic-image" loading="lazy">
+        <img src="https://i.ibb.co/mrbqQhBv/Whats-App-Image-2026-09-10-at-09-03-18.jpg" alt="Trabalho de mosaico 2" class="mosaic-image" loading="lazy">
+        <img src="https://i.ibb.co/CKqcgccb/Whats-App-Image-2026-09-10-at-09-03-01.jpg" alt="Trabalho de mosaico 3" class="mosaic-image" loading="lazy">
+        <img src="https://i.ibb.co/9QyHWnj/Whats-App-Image-2026-09-10-at-09-05-20.jpg" alt="Trabalho de mosaico 4" class="mosaic-image" loading="lazy">
+        <img src="https://i.ibb.co/B2xzkr3t/Whats-App-Image-2026-09-10-at-09-04-42.jpg" alt="Trabalho de mosaico 5" class="mosaic-image" loading="lazy">
+        <img src="https://i.ibb.co/xKYLtLH4/Whats-App-Image-2026-09-10-at-09-04-15.jpg" alt="Trabalho de mosaico 6" class="mosaic-image" loading="lazy">
+      </div>
+
+      <button class="back-button" data-go-home>← Voltar para a revista</button>
+    </section>
+
+    <!-- PORTUGUÊS -->
+    <section id="portugues-view" class="page-view">
+      <div class="inside-head">
+        <span class="eyebrow">Revista Macedo</span>
+        <h1>Língua Portuguesa</h1>
+        <p>Literatura, leitura e produção textual.</p>
+      </div>
+
+      <div class="content-copy">
+        <h2>Intelectuais, literatura e produção textual</h2>
+        <p>Antonio Gramsci desenvolveu uma importante reflexão sobre o papel dos intelectuais na sociedade. Para o autor, os intelectuais não devem ser compreendidos apenas como pessoas ligadas ao mundo acadêmico ou à produção de conhecimento, mas também como sujeitos que participam da organização e da disputa de ideias na sociedade.</p>
+        <p>Gramsci diferencia os intelectuais tradicionais dos intelectuais orgânicos. Enquanto os primeiros tendem a se apresentar como independentes das relações sociais e políticas, os intelectuais orgânicos estão vinculados aos grupos sociais e participam da construção de suas concepções de mundo.</p>
+        <p>A literatura também pode ser compreendida como um espaço de disputa de ideias, valores e visões de mundo. Os textos literários podem provocar questionamentos, apresentar conflitos e permitir diferentes interpretações sobre a sociedade.</p>
+        <h3>Atividade: O caso do vestido</h3>
+        <p>Após a leitura e discussão do poema <strong>“O caso do vestido”</strong>, de Carlos Drummond de Andrade, os estudantes produziram uma carta pessoal destinada a uma das personagens da obra: a mãe, o pai, a filha ou a mulher do vestido. Na carta, expressaram sentimentos, opiniões, conselhos e questionamentos relacionados à situação apresentada no poema, respeitando a estrutura do gênero carta.</p>
+      </div>
+
+      <div class="instagram-feed">
+
+        <article class="instagram-card">
+          <div class="instagram-header">
+            <div class="instagram-avatar"><span>2A</span></div>
+            <div class="instagram-user"><strong>2A • Intelectuais</strong><span>Língua Portuguesa</span></div>
+            <span class="instagram-dots">•••</span>
+          </div>
+          <div class="instagram-carousel">
+            <button class="carousel-button carousel-prev" type="button" aria-label="Imagem anterior">‹</button>
+            <div class="carousel-track">
+              <img src="https://i.ibb.co/9FzF7Ys/Whats-App-Image-2026-09-10-at-07-24-11-2.jpg" class="carousel-image active" alt="Produção 2A 1" loading="lazy">
+              <img src="https://i.ibb.co/n8jnT4qB/Whats-App-Image-2026-09-10-at-07-24-11-1.jpg" class="carousel-image" alt="Produção 2A 2" loading="lazy">
+              <img src="https://i.ibb.co/VYdMjKW3/Whats-App-Image-2026-09-10-at-07-24-11.jpg" class="carousel-image" alt="Produção 2A 3" loading="lazy">
+              <img src="https://i.ibb.co/pBR4JGYv/Whats-App-Image-2026-09-10-at-07-24-10-2.jpg" class="carousel-image" alt="Produção 2A 4" loading="lazy">
+              <img src="https://i.ibb.co/RkFLNxhM/Whats-App-Image-2026-09-10-at-07-24-10-1.jpg" class="carousel-image" alt="Produção 2A 5" loading="lazy">
+              <img src="https://i.ibb.co/MDQ0HSy3/Whats-App-Image-2026-09-10-at-07-24-10.jpg" class="carousel-image" alt="Produção 2A 6" loading="lazy">
+              <img src="https://i.ibb.co/JwRjy8pL/trabalho-literatura.png" class="carousel-image" alt="Produção 2A 7" loading="lazy">
+              <img src="https://i.ibb.co/LDq31HKr/file-00000000a6a4720caf1e379c7d928e3f.png" class="carousel-image" alt="Produção 2A 8" loading="lazy">
+              <img src="https://i.ibb.co/Fk4RNPq4/file-000000000ca8720ea7e4c31efc1ba2a2.png" class="carousel-image" alt="Produção 2A 9" loading="lazy">
+              <img src="https://i.ibb.co/W4h10sbb/1782828223386.png" class="carousel-image" alt="Produção 2A 10" loading="lazy">
+              <img src="https://i.ibb.co/ndh4Y9Z/3-DF37-D6-B-705-F-48-C7-AFF9-ABB5427-BBCAA.png" class="carousel-image" alt="Produção 2A 11" loading="lazy">
+            </div>
+            <button class="carousel-button carousel-next" type="button" aria-label="Próxima imagem">›</button>
+          </div>
+          <div class="instagram-footer">
+            <div class="instagram-actions"><span>♡</span><span>♡</span><span>⌁</span><span class="bookmark">♡</span></div>
+            <div class="instagram-dots-indicator"></div>
+            <p class="instagram-likes">11 produções</p>
+            <p class="instagram-caption"><strong>2A</strong> Produções realizadas na atividade sobre intelectuais e literatura.</p>
+            <span class="instagram-date">EDIÇÃO 2026</span>
+          </div>
+        </article>
+
+        <article class="instagram-card">
+          <div class="instagram-header">
+            <div class="instagram-avatar"><span>2A</span></div>
+            <div class="instagram-user"><strong>2A • Cartas</strong><span>Língua Portuguesa</span></div>
+            <span class="instagram-dots">•••</span>
+          </div>
+          <div class="instagram-carousel">
+            <button class="carousel-button carousel-prev" type="button" aria-label="Imagem anterior">‹</button>
+            <div class="carousel-track">
+              <img src="https://i.ibb.co/MFG3KWG/Whats-App-Image-2026-09-10-at-07-26-13.jpg" class="carousel-image active" alt="Carta 2A 1" loading="lazy">
+              <img src="https://i.ibb.co/HTmMSLgg/Whats-App-Image-2026-09-10-at-07-26-12-2.jpg" class="carousel-image" alt="Carta 2A 2" loading="lazy">
+              <img src="https://i.ibb.co/6JcHv5TW/Whats-App-Image-2026-09-10-at-07-26-12-1.jpg" class="carousel-image" alt="Carta 2A 3" loading="lazy">
+              <img src="https://i.ibb.co/7JVmrtpg/Whats-App-Image-2026-09-10-at-07-26-12.jpg" class="carousel-image" alt="Carta 2A 4" loading="lazy">
+              <img src="https://i.ibb.co/rfZY9PB6/Whats-App-Image-2026-09-10-at-07-26-11-2.jpg" class="carousel-image" alt="Carta 2A 5" loading="lazy">
+              <img src="https://i.ibb.co/bgqLrbjG/Whats-App-Image-2026-09-10-at-07-26-11-1.jpg" class="carousel-image" alt="Carta 2A 6" loading="lazy">
+              <img src="https://i.ibb.co/fdrqRhkc/Whats-App-Image-2026-09-10-at-07-26-11.jpg" class="carousel-image" alt="Carta 2A 7" loading="lazy">
+            </div>
+            <button class="carousel-button carousel-next" type="button" aria-label="Próxima imagem">›</button>
+          </div>
+          <div class="instagram-footer">
+            <div class="instagram-actions"><span>♡</span><span>♡</span><span>⌁</span><span class="bookmark">♡</span></div>
+            <div class="instagram-dots-indicator"></div>
+            <p class="instagram-likes">7 produções</p>
+            <p class="instagram-caption"><strong>2A</strong> Cartas produzidas a partir da leitura de “O caso do vestido”.</p>
+            <span class="instagram-date">EDIÇÃO 2026</span>
+          </div>
+        </article>
+
+        <article class="instagram-card">
+          <div class="instagram-header">
+            <div class="instagram-avatar"><span>2C</span></div>
+            <div class="instagram-user"><strong>2C • Cartas</strong><span>Língua Portuguesa</span></div>
+            <span class="instagram-dots">•••</span>
+          </div>
+          <div class="instagram-carousel">
+            <button class="carousel-button carousel-prev" type="button" aria-label="Imagem anterior">‹</button>
+            <div class="carousel-track">
+              <img src="https://i.ibb.co/RGnDDf1y/file-000000006764820eba50f306f7c82521.png" class="carousel-image active" alt="Carta 2C 1" loading="lazy">
+              <img src="https://i.ibb.co/NdTBs63p/file-000000007c70820ea0b08aa1e94405a5.png" class="carousel-image" alt="Carta 2C 2" loading="lazy">
+              <img src="https://i.ibb.co/bjMGM8LS/1787151659672.png" class="carousel-image" alt="Carta 2C 3" loading="lazy">
+              <img src="https://i.ibb.co/gLCP5wCW/1787151525615-jpg.jpg" class="carousel-image" alt="Carta 2C 4" loading="lazy">
+              <img src="https://i.ibb.co/DPMGsHJ8/Whats-App-Image-2026-09-10-at-07-27-56.jpg" class="carousel-image" alt="Carta 2C 5" loading="lazy">
+              <img src="https://i.ibb.co/Fqd0jLwV/Whats-App-Image-2026-09-10-at-07-27-56-1.jpg" class="carousel-image" alt="Carta 2C 6" loading="lazy">
+            </div>
+            <button class="carousel-button carousel-next" type="button" aria-label="Próxima imagem">›</button>
+          </div>
+          <div class="instagram-footer">
+            <div class="instagram-dots-indicator"></div>
+            <p class="instagram-caption"><strong>2C</strong> Cartas produzidas a partir da leitura de “O caso do vestido”.</p>
+            <span class="instagram-date">EDIÇÃO 2026</span>
+          </div>
+        </article>
+
+        <article class="instagram-card">
+          <div class="instagram-header">
+            <div class="instagram-avatar"><span>2C</span></div>
+            <div class="instagram-user"><strong>2C • Intelectuais</strong><span>Língua Portuguesa</span></div>
+            <span class="instagram-dots">•••</span>
+          </div>
+          <div class="instagram-carousel">
+            <button class="carousel-button carousel-prev" type="button" aria-label="Imagem anterior">‹</button>
+            <div class="carousel-track">
+              <img src="https://i.ibb.co/qLjBXt84/Whats-App-Image-2026-09-10-at-07-27-36-2.jpg" class="carousel-image active" alt="Produção 2C 1" loading="lazy">
+              <img src="https://i.ibb.co/VcqxBP27/Whats-App-Image-2026-09-10-at-07-27-36-1.jpg" class="carousel-image" alt="Produção 2C 2" loading="lazy">
+              <img src="https://i.ibb.co/CKb9GLpp/Whats-App-Image-2026-09-10-at-07-27-36.jpg" class="carousel-image" alt="Produção 2C 3" loading="lazy">
+              <img src="https://i.ibb.co/1JvFXvPF/Whats-App-Image-2026-09-10-at-07-27-35-1.jpg" class="carousel-image" alt="Produção 2C 4" loading="lazy">
+              <img src="https://i.ibb.co/JwZMyBkh/Whats-App-Image-2026-09-10-at-07-27-35.jpg" class="carousel-image" alt="Produção 2C 5" loading="lazy">
+              <img src="https://i.ibb.co/TMJwccB1/Post-novo-fundo-de-story-de-instagram-branco.png" class="carousel-image" alt="Produção 2C 6" loading="lazy">
+              <img src="https://i.ibb.co/fVHb3TrS/Post-Instagram-Carrossel-Ansiedade-Sa-de-Mental-Minimalista-Moderno-Marrom-Bege.png" class="carousel-image" alt="Produção 2C 7" loading="lazy">
+              <img src="https://i.ibb.co/sp088MkY/Patrice-Lumumba.png" class="carousel-image" alt="Produção 2C 8" loading="lazy">
+              <img src="https://i.ibb.co/3GBHdhj/IMG-20260701-110548-jpg.jpg" class="carousel-image" alt="Produção 2C 9" loading="lazy">
+              <img src="https://i.ibb.co/Gf3YkjZ0/file-00000000e334720c8c2313b705a31794.png" class="carousel-image" alt="Produção 2C 10" loading="lazy">
+              <img src="https://i.ibb.co/7dzmS9y8/file-000000000fcc720e8c2c0e8bdfc13941.png" class="carousel-image" alt="Produção 2C 11" loading="lazy">
+              <img src="https://i.ibb.co/SwdWZgbQ/file-000000000d90720ea54b3af9853a3d6e.png" class="carousel-image" alt="Produção 2C 12" loading="lazy">
+              <img src="https://i.ibb.co/mrpN0fRs/John-e-Matheus-Martin-Luther-King-Jr.png" class="carousel-image" alt="Produção 2C 13" loading="lazy">
+            </div>
+            <button class="carousel-button carousel-next" type="button" aria-label="Próxima imagem">›</button>
+          </div>
+          <div class="instagram-footer">
+            <div class="instagram-dots-indicator"></div>
+            <p class="instagram-caption"><strong>2C</strong> Produções relacionadas ao estudo dos intelectuais e da literatura.</p>
+            <span class="instagram-date">EDIÇÃO 2026</span>
+          </div>
+        </article>
+
+      </div>
+
+      <button class="back-button" data-go-home>← Voltar para a revista</button>
+    </section>
+
+    <!-- EDUCAÇÃO AMBIENTAL -->
+    <section id="meioambiente-view" class="page-view">
+      <div class="inside-head">
+        <span class="eyebrow">Ciência • Sustentabilidade • Experimentação</span>
+        <h1>Educação do Meio Ambiente</h1>
+        <p>Investigando o efeito estufa</p>
+      </div>
+
+      <div class="content-copy">
+        <h2>Uma estufa experimental</h2>
+        <p>Na disciplina de Educação do Meio Ambiente, foi realizada a fabricação de uma estufa experimental para compreender seu funcionamento e como ocorre o aquecimento em seu interior, relacionando essa experiência ao efeito estufa e ao aquecimento global.</p>
+      </div>
+
+      <div class="instagram-feed">
+        <article class="instagram-card">
+          <div class="instagram-header">
+            <div class="instagram-avatar"><span>EA</span></div>
+            <div class="instagram-user">
+              <strong>Educação do Meio Ambiente</strong>
+              <span>Revista Macedo • 2026</span>
+            </div>
+            <span class="instagram-dots">•••</span>
+          </div>
+
+          <div class="instagram-carousel">
+            <button class="carousel-button carousel-prev" type="button" aria-label="Imagem anterior">‹</button>
+            <div class="carousel-track">
+              <img src="https://i.ibb.co/bRsfC8Fy/Whats-App-Image-2026-10-23-at-08-39-35-1.jpg" alt="Fabricação da estufa experimental 1" class="carousel-image active" loading="lazy">
+              <img src="https://i.ibb.co/Sw4jCrPh/Whats-App-Image-2026-10-23-at-08-39-35.jpg" alt="Fabricação da estufa experimental 2" class="carousel-image" loading="lazy">
+              <img src="https://i.ibb.co/67VXVYQQ/Whats-App-Image-2026-10-23-at-08-39-34-3.jpg" alt="Atividade da estufa 3" class="carousel-image" loading="lazy">
+              <img src="https://i.ibb.co/60cHGy8c/Whats-App-Image-2026-10-23-at-08-39-34-2.jpg" alt="Atividade da estufa 4" class="carousel-image" loading="lazy">
+              <img src="https://i.ibb.co/TqcdQmVy/Whats-App-Image-2026-10-23-at-08-39-34-1.jpg" alt="Atividade da estufa 5" class="carousel-image" loading="lazy">
+              <img src="https://i.ibb.co/x82XsTXs/Whats-App-Image-2026-10-23-at-08-39-34.jpg" alt="Atividade da estufa 6" class="carousel-image" loading="lazy">
+              <img src="https://i.ibb.co/mk5KL0W/Whats-App-Image-2026-10-23-at-08-39-33.jpg" alt="Atividade da estufa 7" class="carousel-image" loading="lazy">
+            </div>
+            <button class="carousel-button carousel-next" type="button" aria-label="Próxima imagem">›</button>
+          </div>
+
+          <div class="instagram-footer">
+            <div class="instagram-dots-indicator"></div>
+            <p class="instagram-caption">A fabricação da estufa experimental permitiu observar seu funcionamento e investigar como ocorre o aquecimento em seu interior, relacionando a experiência ao efeito estufa e ao aquecimento global.</p>
+            <span class="instagram-date">EDUCAÇÃO DO MEIO AMBIENTE • EDIÇÃO 2026</span>
+          </div>
+        </article>
+      </div>
+
+      <button class="back-button" data-go-home>← Voltar para a revista</button>
+    </section>
+
+    <!-- ROBÓTICA -->
+    <section id="robotica-view" class="page-view">
+      <div class="inside-head">
+        <span class="eyebrow">Educação Digital e Robótica • 2ºB</span>
+        <h1>Robótica</h1>
+        <p>Tecnologia e acessibilidade visual</p>
+      </div>
+
+      <div class="content-copy">
+        <h2>Robótica a serviço da acessibilidade</h2>
+        <p>A robótica no Ensino Médio combina conceitos de Ciência, Tecnologia, Engenharia, Arte e Matemática (metodologia STEAM), integrando design físico, eletrônica e programação na resolução de problemas concretos. Mais do que ensinar a construir robôs, funciona como ferramenta de letramento tecnológico e científico, conectando teoria e prática.</p>
+        <p>Ao longo deste trimestre, os estudantes do 2ºB integraram conceitos de eletrônica e automação no desenvolvimento de quatro projetos voltados à acessibilidade visual.</p>
+      </div>
+
+      <div class="robotica-projects">
+
+        <article class="robotica-project">
+          <div class="robotica-project-number">PROJETO 01</div>
+          <h2>Aplicação com LED RGB</h2>
+          <p>Investigação sobre a física da luz e a mistura de cores primárias para criar diferentes tonalidades a partir de um único componente.</p>
+          <div class="robotica-project-info">
+            <h3>Estudantes</h3>
+            <p>Gabriel Siqueira, João Vittor, Laurianny Biatriz, Mayara de Araujo e Rafael Luiz.</p>
+            <h3>Objetivo</h3>
+            <p>Ajudar pessoas a identificar a saída em situações de emergência.</p>
+            <h3>Como funciona?</h3>
+            <p>Em situações de perigo, o LED RGB brilha em vermelho; quando tudo está normal, brilha em verde. A luz pode ajudar a identificar uma situação de perigo e indicar a saída.</p>
+          </div>
+          <div class="robotica-video">
+            <iframe src="https://drive.google.com/file/d/1A17INOOfX9oY39x1OR_yi3rl_l1oIeFY/preview" title="Vídeo do projeto Aplicação com LED RGB" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <a class="robotica-video-link" href="https://drive.google.com/file/d/1A17INOOfX9oY39x1OR_yi3rl_l1oIeFY/view?usp=sharing" target="_blank" rel="noopener noreferrer">Assistir ao vídeo no Google Drive ↗</a>
+        </article>
+
+        <article class="robotica-project">
+          <div class="robotica-project-number">PROJETO 02</div>
+          <h2>Efeito LED Arco-Íris</h2>
+          <p>Uso da modulação PWM para criar transições suaves entre cores, explorando o controle progressivo da intensidade luminosa.</p>
+          <div class="robotica-project-info">
+            <h3>Estudantes</h3>
+            <p>Adrian da Quinta, Ayslan da Costa, Brayan Henrique e Bruno Rodrigues.</p>
+            <h3>Objetivo</h3>
+            <p>Desenvolver um relógio virtual de cores para representar a rotina: manhã, tarde e noite.</p>
+            <h3>Como funciona?</h3>
+            <p>Para pessoas com baixa visão, a luz pode substituir números pequenos por cores fáceis de identificar. Para pessoas cegas, o protótipo precisaria de adaptações sonoras.</p>
+          </div>
+          <div class="robotica-video">
+            <iframe src="https://drive.google.com/file/d/1K_Sxm711CNCTcI6osgXL-jxad5Ck8I5F/preview" title="Vídeo do projeto Efeito LED Arco-Íris" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <a class="robotica-video-link" href="https://drive.google.com/file/d/1K_Sxm711CNCTcI6osgXL-jxad5Ck8I5F/view?usp=sharing" target="_blank" rel="noopener noreferrer">Assistir ao vídeo no Google Drive ↗</a>
+        </article>
+
+        <article class="robotica-project">
+          <div class="robotica-project-number">PROJETO 03</div>
+          <h2>Semáforo Inteligente</h2>
+          <p>Desenvolvimento de uma lógica de controle de tráfego com contagem de tempo e alternância de LEDs, simulando um cruzamento real.</p>
+          <div class="robotica-project-info">
+            <h3>Estudantes</h3>
+            <p>Enzo Henrique, João Gabriel, João Victor, Luan Dias e Kendryck Gabriel.</p>
+            <h3>Objetivo</h3>
+            <p>Criar um semáforo funcional e acessível para contribuir com a segurança no cruzamento, incluindo pessoas daltônicas, com baixa visão e cegas.</p>
+            <h3>Como funciona?</h3>
+            <p>O protótipo combina luzes, formas geométricas de alto contraste e sinais sonoros. A proposta associa círculo ao verde, triângulo ao amarelo e quadrado ao vermelho. Apitos do buzzer podem indicar as etapas da travessia.</p>
+          </div>
+          <div class="robotica-video">
+            <iframe src="https://drive.google.com/file/d/1MdVTgz5wxJ9fcMHMeopjTWDzhfs9yM7F/preview" title="Vídeo do projeto Semáforo Inteligente" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <a class="robotica-video-link" href="https://drive.google.com/file/d/1MdVTgz5wxJ9fcMHMeopjTWDzhfs9yM7F/view?usp=sharing" target="_blank" rel="noopener noreferrer">Assistir ao vídeo no Google Drive ↗</a>
+        </article>
+
+        <article class="robotica-project">
+          <div class="robotica-project-number">PROJETO 04</div>
+          <h2>Sensor de Movimento e Presença</h2>
+          <p>Integração de sensores para detectar movimento e acionar respostas visuais e sonoras automaticamente.</p>
+          <div class="robotica-project-info">
+            <h3>Estudantes</h3>
+            <p>Bruno Dutra e Eduarda Barth.</p>
+            <h3>Objetivo</h3>
+            <p>Desenvolver uma solução de baixo custo voltada à acessibilidade, à autonomia e à segurança de pessoas cegas ou com baixa visão em ambientes internos.</p>
+            <h3>Como funciona?</h3>
+            <p>O sensor PIR detecta variações de infravermelho associadas ao movimento e envia a informação ao Arduino. Uma luz pode ajudar pessoas com baixa visão, enquanto um sinal sonoro pode oferecer uma referência a pessoas cegas, dependendo da configuração e do ambiente.</p>
+          </div>
+          <div class="robotica-video">
+            <iframe src="https://drive.google.com/file/d/1vRiINOB1DIT51lUz-AVo8yIsneFWhcEU/preview" title="Vídeo do projeto Sensor de Movimento e Presença" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <a class="robotica-video-link" href="https://drive.google.com/file/d/1vRiINOB1DIT51lUz-AVo8yIsneFWhcEU/view?usp=sharing" target="_blank" rel="noopener noreferrer">Assistir ao vídeo no Google Drive ↗</a>
+        </article>
+
+      </div>
+
+      <div class="content-copy">
+        <h2>Da programação à solução de problemas reais</h2>
+        <p>A sequência de atividades permitiu que a turma consolidasse o domínio sobre entradas, saídas, leitura de sensores e controle de atuadores, construindo a base técnica necessária para desenvolver soluções voltadas à acessibilidade visual. Os projetos mostram como a robótica pode aproximar a aprendizagem tecnológica de desafios concretos do cotidiano.</p>
+        <p><strong>Professor Arnaldo Veiga • 2ºB</strong></p>
+      </div>
+
+      <button class="back-button" data-go-home>← Voltar para a revista</button>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <strong>Revista Macedo</strong>
+        <span>Colégio Cívico-Militar Vila Macedo</span>
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="YouTube">YouTube</a>
+      </div>
+      <div class="footer-copy">© 2026 Revista Macedo</div>
+    </div>
+  </footer>
+
+  <button class="top-button" id="topButton" aria-label="Voltar ao topo">↑</button>
+</div>
+</body>
+</html>
