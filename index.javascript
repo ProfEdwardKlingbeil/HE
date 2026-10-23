@@ -1,31 +1,30 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-  const pages = [...document.querySelectorAll(".page-view")];
-  const navButtons = [...document.querySelectorAll("[data-open-page]")];
-  const homeButtons = [...document.querySelectorAll("[data-go-home]")];
-  const nav = document.querySelector(".main-nav");
-  const menuToggle = document.querySelector(".mobile-menu-toggle");
-  const topButton = document.getElementById("topButton");
+  const pages = document.querySelectorAll(".page");
+  const navigationButtons = document.querySelectorAll("[data-open-page]");
+  const homeButtons = document.querySelectorAll("[data-go-home]");
+  const nav = document.getElementById("main-nav");
+  const menuToggle = document.getElementById("menu-toggle");
 
   function openPage(pageName) {
-    const target = document.getElementById(`${pageName}-view`);
+    const targetPage = document.getElementById(`${pageName}-view`);
 
-    if (!target) return;
+    if (!targetPage) {
+      console.error(`Página não encontrada: ${pageName}-view`);
+      return;
+    }
 
-    pages.forEach(page => {
-      page.classList.toggle("active", page === target);
+    pages.forEach((page) => {
+      page.classList.toggle("active", page === targetPage);
     });
 
-    navButtons.forEach(button => {
-      const selected = button.dataset.openPage === pageName;
+    navigationButtons.forEach((button) => {
+      const isActive = button.dataset.openPage === pageName;
 
-      button.classList.toggle("is-active", selected);
-
-      if (selected) {
-        button.setAttribute("aria-current", "page");
-      } else {
-        button.removeAttribute("aria-current");
-      }
+      button.classList.toggle(
+        "active",
+        isActive && button.classList.contains("nav-link")
+      );
     });
 
     if (nav) {
@@ -34,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (menuToggle) {
       menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Abrir menu");
     }
 
     window.scrollTo({
@@ -42,171 +42,114 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Navegação principal.
-  navButtons.forEach(button => {
+  navigationButtons.forEach((button) => {
     button.addEventListener("click", () => {
       openPage(button.dataset.openPage);
     });
   });
 
-  // Botões que retornam à página inicial.
-  homeButtons.forEach(button => {
-    button.addEventListener("click", event => {
-      event.preventDefault();
-      openPage("home");
+  homeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      openPage("inicio");
     });
   });
 
-  // Menu para celulares.
   if (menuToggle && nav) {
     menuToggle.addEventListener("click", () => {
       const isOpen = nav.classList.toggle("open");
 
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
       menuToggle.setAttribute(
-        "aria-expanded",
-        String(isOpen)
+        "aria-label",
+        isOpen ? "Fechar menu" : "Abrir menu"
       );
     });
   }
 
-  // Inicializa cada carrossel de forma independente.
-  function initializeCarousel(card) {
-    const images = [
-      ...card.querySelectorAll(".carousel-image")
-    ];
+  // Configuração independente de cada carrossel.
+  document.querySelectorAll("[data-carousel]").forEach((carousel) => {
+    const track = carousel.querySelector(".carousel-track");
+    const slides = Array.from(carousel.querySelectorAll(".carousel-slide"));
+    const previousButton = carousel.querySelector("[data-carousel-prev]");
+    const nextButton = carousel.querySelector("[data-carousel-next]");
 
-    const previous = card.querySelector(".carousel-prev");
-    const next = card.querySelector(".carousel-next");
-    const indicator = card.querySelector(
-      ".instagram-dots-indicator"
-    );
+    if (!track || slides.length === 0) {
+      console.warn("Carrossel sem imagens ou sem faixa de slides.", carousel);
+      return;
+    }
 
-    if (!images.length) return;
+    const gallerySection = carousel.closest(".gallery-section");
+    const dotsContainer = gallerySection
+      ? gallerySection.querySelector("[data-carousel-dots]")
+      : null;
+    const counter = gallerySection
+      ? gallerySection.querySelector("[data-gallery-count]")
+      : null;
 
-    let current = images.findIndex(image =>
-      image.classList.contains("active")
-    );
+    let currentIndex = 0;
+    let dots = [];
 
-    if (current < 0) current = 0;
+    if (dotsContainer) {
+      dotsContainer.innerHTML = "";
 
-    // Cria os pequenos indicadores de imagem.
-    if (indicator) {
-      indicator.replaceChildren();
-
-      images.forEach((image, index) => {
+      slides.forEach((slide, index) => {
         const dot = document.createElement("button");
 
         dot.type = "button";
-
-        dot.setAttribute(
-          "aria-label",
-          `Mostrar imagem ${index + 1} de ${images.length}`
-        );
+        dot.className = "carousel-dot";
+        dot.setAttribute("aria-label", `Ver imagem ${index + 1}`);
 
         dot.addEventListener("click", () => {
-          showImage(index);
+          showSlide(index);
         });
 
-        indicator.appendChild(dot);
+        dotsContainer.appendChild(dot);
+        dots.push(dot);
       });
     }
 
-    function showImage(index) {
-      current = (index + images.length) % images.length;
+    function showSlide(index) {
+      currentIndex = (index + slides.length) % slides.length;
 
-      images.forEach((image, imageIndex) => {
-        const selected = imageIndex === current;
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
 
-        image.classList.toggle("active", selected);
-
-        image.setAttribute(
+      slides.forEach((slide, slideIndex) => {
+        slide.classList.toggle("active", slideIndex === currentIndex);
+        slide.setAttribute(
           "aria-hidden",
-          String(!selected)
+          String(slideIndex !== currentIndex)
         );
       });
 
-      if (indicator) {
-        [...indicator.children].forEach((dot, dotIndex) => {
-          const selected = dotIndex === current;
+      dots.forEach((dot, dotIndex) => {
+        const isActive = dotIndex === currentIndex;
 
-          dot.classList.toggle("active", selected);
+        dot.classList.toggle("active", isActive);
+        dot.setAttribute("aria-current", isActive ? "true" : "false");
+      });
 
-          dot.setAttribute(
-            "aria-pressed",
-            String(selected)
-          );
-        });
-      }
+      if (counter) {
+        const current = String(currentIndex + 1).padStart(2, "0");
+        const total = String(slides.length).padStart(2, "0");
 
-      if (previous) {
-        previous.disabled = images.length < 2;
-      }
-
-      if (next) {
-        next.disabled = images.length < 2;
+        counter.textContent = `${current} / ${total}`;
       }
     }
 
-    if (previous) {
-      previous.addEventListener("click", () => {
-        showImage(current - 1);
+    if (previousButton) {
+      previousButton.addEventListener("click", () => {
+        showSlide(currentIndex - 1);
       });
     }
 
-    if (next) {
-      next.addEventListener("click", () => {
-        showImage(current + 1);
+    if (nextButton) {
+      nextButton.addEventListener("click", () => {
+        showSlide(currentIndex + 1);
       });
     }
 
-    // Permite trocar imagens com as setas do teclado.
-    const carousel = card.querySelector(".instagram-carousel");
-
-    if (carousel) {
-      carousel.addEventListener("keydown", event => {
-        if (event.key === "ArrowLeft") {
-          showImage(current - 1);
-        }
-
-        if (event.key === "ArrowRight") {
-          showImage(current + 1);
-        }
-      });
-    }
-
-    showImage(current);
-  }
-
-  document.querySelectorAll(".instagram-card").forEach(card => {
-    initializeCarousel(card);
+    showSlide(0);
   });
 
-  // Botão de voltar ao topo.
-  function updateTopButton() {
-    if (!topButton) return;
-
-    topButton.classList.toggle(
-      "visible",
-      window.scrollY > 350
-    );
-  }
-
-  window.addEventListener("scroll", updateTopButton, {
-    passive: true
-  });
-
-  updateTopButton();
-
-  if (topButton) {
-    topButton.addEventListener("click", () => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
-    });
-  }
-
-  // Abre a página inicial ao carregar.
-  openPage("home");
+  console.info("Revista Macedo: JavaScript carregado corretamente.");
 });
-
