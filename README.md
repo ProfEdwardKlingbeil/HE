@@ -492,6 +492,1023 @@
               <img src="https://i.ibb.co/VcqxBP27/Whats-App-Image-2026-09-10-at-07-27-36-1.jpg" class="carousel-image" alt="Produção 2C 2" loading="lazy">
               <img src="https://i.ibb.co/CKb9GLpp/Whats-App-Image-2026-09-10-at-07-27-36.jpg" class="carousel-image" alt="Produção 2C 3" loading="lazy">
               <img src="https://i.ibb.co/1JvFXvPF/Whats-App-Image-2026-09-10-at-07-27-35-1.jpg" class="carousel-image" alt="Produção 2C 4" loading="lazy">
+
+              
+:root {
+  --navy: #102a43;
+  --burgundy: #7f263b;
+  --gold: #c7a259;
+  --cream: #f4f0e8;
+  --paper: #fffdf8;
+  --ink: #253746;
+  --muted: #657481;
+  --line: #e4ddd1;
+  --shadow: 0 14px 38px rgba(16, 42, 67, .10);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Raleway", sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+.site-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* CABEÇALHO */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 253, 248, .97);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(12px);
+}
+
+.header-inner {
+  width: min(1400px, calc(100% - 48px));
+  margin: auto;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.school-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  min-width: 230px;
+}
+
+.school-logo {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+.school-name {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  color: var(--navy);
+  font-size: 11px;
+  line-height: 1.25;
+}
+
+.school-name strong {
+  font-family: "Cardo", serif;
+  font-size: 20px;
+}
+
+.magazine-brand {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid var(--line);
+  padding-left: 24px;
+  color: var(--burgundy);
+  line-height: .95;
+}
+
+.magazine-brand span {
+  font-size: 13px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+.magazine-brand strong {
+  font-family: "Cardo", serif;
+  font-size: 31px;
+}
+
+.main-nav {
+  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 4px;
+}
+
+.main-nav button {
+  border: 0;
+  background: transparent;
+  color: var(--navy);
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 10px 8px;
+  border-radius: 3px;
+  transition: background .2s, color .2s;
+}
+
+.main-nav button:hover,
+.main-nav button.is-active {
+  background: var(--navy);
+  color: white;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  border: 0;
+  background: var(--navy);
+  color: white;
+  border-radius: 4px;
+  padding: 9px 12px;
+  cursor: pointer;
+}
+
+/* PÁGINAS */
+
+main {
+  flex: 1;
+}
+
+.page-view {
+  display: none;
+  animation: pageIn .35s ease both;
+}
+
+.page-view.active {
+  display: block;
+}
+
+@keyframes pageIn {
+  from {
+    opacity: 0;
+    transform: translateY(7px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* CAPA INICIAL */
+
+.edition-strip {
+  padding: 11px 20px;
+  background: var(--burgundy);
+  color: white;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .22em;
+}
+
+.masthead {
+  padding: 38px 24px 54px;
+  background: var(--cream);
+}
+
+.cover-grid {
+  width: min(1180px, 100%);
+  min-height: 420px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  background: white;
+  box-shadow: var(--shadow);
+}
+
+.cover-photo {
+  min-height: 420px;
+  overflow: hidden;
+}
+
+.cover-photo img {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  object-fit: cover;
+}
+
+.cover-copy {
+  position: relative;
+  padding: clamp(28px, 5vw, 68px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.eyebrow {
+  display: inline-block;
+  color: var(--burgundy);
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  line-height: 1.7;
+}
+
+.cover-copy h1 {
+  margin: 17px 0;
+  color: var(--navy);
+  font: 700 clamp(48px, 6vw, 76px)/.92 "Cardo", serif;
+  letter-spacing: -.04em;
+}
+
+.cover-copy h1 em {
+  color: var(--burgundy);
+  font-weight: 400;
+}
+
+.cover-copy p {
+  max-width: 410px;
+  color: #4d5d68;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.issue-seal {
+  margin-top: 12px;
+  width: 68px;
+  height: 68px;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  color: var(--burgundy);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-8deg);
+}
+
+.issue-seal strong {
+  font: 700 21px "Cardo", serif;
+}
+
+.issue-seal span {
+  font-size: 8px;
+  letter-spacing: .12em;
+}
+
+/* CARDS DA PÁGINA INICIAL */
+
+.editorial-section {
+  width: min(1180px, calc(100% - 48px));
+  margin: auto;
+  padding: 68px 0 80px;
+}
+
+.editorial-heading {
+  max-width: 720px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.editorial-heading h2 {
+  margin: 10px 0 18px;
+  color: var(--navy);
+  font: 700 clamp(30px, 4vw, 44px)/1.15 "Cardo", serif;
+}
+
+.editorial-rule {
+  width: 66px;
+  height: 3px;
+  margin: 0 auto 18px;
+  background: var(--gold);
+}
+
+.editorial-heading p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.article-card {
+  position: relative;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.article-photo {
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: var(--cream);
+}
+
+.article-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .5s;
+}
+
+.article-card:hover .article-photo img {
+  transform: scale(1.04);
+}
+
+.article-number {
+  display: inline-block;
+  margin-top: 17px;
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .1em;
+}
+
+.article-card h3 {
+  margin: 7px 0;
+  color: var(--navy);
+  font: 700 25px "Cardo", serif;
+}
+
+.article-card p {
+  min-height: 62px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.read-link {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--burgundy);
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.read-link:hover {
+  text-decoration: underline;
+}
+
+/* CABEÇALHO DAS PÁGINAS INTERNAS */
+
+.inside-head {
+  padding: 62px 24px 38px;
+  background: var(--cream);
+  text-align: center;
+}
+
+.inside-head h1 {
+  margin: 10px 0 12px;
+  color: var(--navy);
+  font: 700 clamp(42px, 6vw, 64px)/1.05 "Cardo", serif;
+}
+
+.inside-head p {
+  max-width: 760px;
+  margin: auto;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* TEXTOS EXPLICATIVOS */
+
+.content-copy {
+  width: min(900px, calc(100% - 40px));
+  margin: 34px auto 38px;
+  padding: 28px 32px;
+  background: var(--cream);
+  border-left: 4px solid var(--gold);
+}
+
+.content-copy h2 {
+  margin: 0 0 16px;
+  color: var(--navy);
+  font: 700 clamp(24px, 3vw, 34px)/1.25 "Cardo", serif;
+}
+
+.content-copy h3 {
+  color: var(--burgundy);
+  font: 700 22px "Cardo", serif;
+}
+
+.content-copy p {
+  margin: 0 0 15px;
+  color: #344958;
+  font-size: 14px;
+  line-height: 1.9;
+  text-align: justify;
+}
+
+.content-copy p:last-child {
+  margin-bottom: 0;
+}
+
+/* CARROSSEL */
+
+.instagram-feed {
+  width: min(720px, calc(100% - 32px));
+  margin: 0 auto 38px;
+  display: grid;
+  gap: 30px;
+}
+
+.instagram-card {
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  box-shadow: 0 8px 26px rgba(16, 42, 67, .06);
+}
+
+.instagram-header {
+  min-height: 66px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.instagram-avatar {
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--burgundy), var(--gold));
+  color: white;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.instagram-user {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.instagram-user strong {
+  color: #202b32;
+  font-size: 12px;
+}
+
+.instagram-user span {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.instagram-dots {
+  margin-left: auto;
+  color: #4b5660;
+  letter-spacing: 2px;
+}
+
+.instagram-carousel {
+  position: relative;
+  background: #eee9df;
+  overflow: hidden;
+}
+
+.carousel-track {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}
+
+.carousel-image {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #f7f5f1;
+}
+
+.carousel-image.active {
+  display: block;
+  animation: imageIn .25s ease;
+}
+
+@keyframes imageIn {
+  from { opacity: .5; }
+  to { opacity: 1; }
+}
+
+.carousel-button {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .92);
+  color: var(--navy);
+  box-shadow: 0 2px 10px #0002;
+  cursor: pointer;
+  font-size: 27px;
+  line-height: 1;
+}
+
+.carousel-button:hover {
+  background: white;
+  color: var(--burgundy);
+}
+
+.carousel-prev {
+  left: 12px;
+}
+
+.carousel-next {
+  right: 12px;
+}
+
+.instagram-footer {
+  padding: 13px 16px 17px;
+}
+
+.instagram-actions {
+  display: flex;
+  gap: 13px;
+  color: #243746;
+  font-size: 23px;
+  line-height: 1;
+}
+
+.instagram-actions .bookmark {
+  margin-left: auto;
+}
+
+.instagram-dots-indicator {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  min-height: 13px;
+  margin: 10px 0;
+}
+
+.instagram-dots-indicator button {
+  width: 6px;
+  height: 6px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #c9cfd3;
+  cursor: pointer;
+}
+
+.instagram-dots-indicator button.active {
+  background: #3684bf;
+}
+
+.instagram-likes {
+  margin: 5px 0;
+  color: #293b47;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.instagram-caption {
+  margin: 7px 0;
+  color: #364650;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.instagram-caption strong {
+  color: #202b32;
+}
+
+.instagram-date {
+  display: block;
+  margin-top: 12px;
+  color: #89949b;
+  font-size: 9px;
+  letter-spacing: .1em;
+}
+
+/* GALERIA DE ARTES */
+
+.mosaic-gallery {
+  width: min(1050px, calc(100% - 40px));
+  margin: 0 auto 40px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.mosaic-image {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  background: var(--cream);
+}
+
+/* ROBÓTICA */
+
+.robotica-projects {
+  width: min(1000px, calc(100% - 40px));
+  margin: 0 auto 38px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.robotica-project {
+  padding: 25px;
+  border: 1px solid var(--line);
+  background: white;
+  box-shadow: 0 8px 25px rgba(16, 42, 67, .05);
+}
+
+.robotica-project-number {
+  color: var(--burgundy);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .15em;
+}
+
+.robotica-project h2 {
+  margin: 10px 0;
+  color: var(--navy);
+  font: 700 28px "Cardo", serif;
+}
+
+.robotica-project > p,
+.robotica-project-info p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.robotica-project-info {
+  padding-top: 10px;
+}
+
+.robotica-project-info h3 {
+  margin: 15px 0 4px;
+  color: var(--burgundy);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.robotica-project-info p {
+  margin: 0;
+}
+
+.robotica-video {
+  margin-top: 18px;
+  aspect-ratio: 16 / 9;
+  background: #101820;
+}
+
+.robotica-video iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.robotica-video-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--burgundy);
+  font-size: 11px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.robotica-video-link:hover {
+  text-decoration: underline;
+}
+
+/* BOTÃO DE VOLTAR */
+
+.back-button {
+  display: block;
+  margin: 0 auto 55px;
+  padding: 12px 18px;
+  border: 1px solid var(--navy);
+  background: transparent;
+  color: var(--navy);
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 800;
+  transition: .2s;
+}
+
+.back-button:hover {
+  background: var(--navy);
+  color: white;
+}
+
+/* RODAPÉ */
+
+.site-footer {
+  margin-top: auto;
+  background: var(--navy);
+  color: white;
+}
+
+.footer-inner {
+  width: min(1180px, calc(100% - 48px));
+  min-height: 125px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.footer-inner > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.footer-inner strong {
+  font: 700 25px "Cardo", serif;
+}
+
+.footer-inner span,
+.footer-copy {
+  color: #d0d9df;
+  font-size: 10px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 18px;
+}
+
+.footer-social a {
+  color: #f0d9a6;
+  font-size: 11px;
+  text-decoration: none;
+}
+
+.footer-social a:hover {
+  text-decoration: underline;
+}
+
+/* VOLTAR AO TOPO */
+
+.top-button {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 90;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--burgundy);
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: .2s;
+}
+
+.top-button.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* TABLETS */
+
+@media (max-width: 1150px) {
+  .header-inner {
+    width: calc(100% - 30px);
+    gap: 16px;
+    flex-wrap: wrap;
+    padding: 12px 0;
+  }
+
+  .school-brand {
+    min-width: 205px;
+  }
+
+  .school-logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  .magazine-brand {
+    padding-left: 15px;
+  }
+
+  .main-nav {
+    flex-basis: 100%;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .main-nav button {
+    font-size: 10px;
+  }
+}
+
+/* CELULARES */
+
+@media (max-width: 760px) {
+  .header-inner {
+    min-height: auto;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+  }
+
+  .school-brand {
+    min-width: 0;
+  }
+
+  .school-name strong {
+    font-size: 17px;
+  }
+
+  .magazine-brand {
+    grid-column: 1;
+    grid-row: 2;
+    border-left: 0;
+    padding-left: 0;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 8px;
+  }
+
+  .magazine-brand strong {
+    font-size: 24px;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    align-self: center;
+  }
+
+  .main-nav {
+    display: none;
+    grid-column: 1 / -1;
+    padding: 8px 0 4px;
+    justify-content: flex-start;
+  }
+
+  .main-nav.open {
+    display: flex;
+  }
+
+  .main-nav button {
+    flex: 1 1 30%;
+    text-align: center;
+  }
+
+  .cover-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cover-photo,
+  .cover-photo img {
+    min-height: 240px;
+    max-height: 300px;
+  }
+
+  .cover-copy {
+    padding: 30px;
+  }
+
+  .masthead {
+    padding: 20px 14px 30px;
+  }
+
+  .editorial-section {
+    width: calc(100% - 30px);
+    padding: 45px 0 55px;
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 14px;
+  }
+
+  .article-card h3 {
+    font-size: 22px;
+  }
+
+  .article-card p {
+    min-height: 0;
+  }
+
+  .inside-head {
+    padding: 45px 18px 28px;
+  }
+
+  .content-copy {
+    width: calc(100% - 28px);
+    padding: 22px 19px;
+  }
+
+  .content-copy p {
+    font-size: 13px;
+  }
+
+  .mosaic-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .robotica-projects {
+    grid-template-columns: 1fr;
+    width: calc(100% - 28px);
+  }
+
+  .footer-inner {
+    padding: 24px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 17px;
+  }
+}
+
+@media (max-width: 420px) {
+  .school-logo {
+    width: 42px;
+    height: 42px;
+  }
+
+  .school-name {
+    font-size: 9px;
+  }
+
+  .school-name strong {
+    font-size: 15px;
+  }
+
+  .feature-grid {
+    gap: 17px 10px;
+  }
+
+  .article-card h3 {
+    font-size: 19px;
+  }
+
+  .article-card p {
+    font-size: 11px;
+  }
+
+  .carousel-track {
+    aspect-ratio: 3 / 4;
+  }
+
+  .carousel-button {
+    width: 32px;
+    height: 32px;
+    font-size: 23px;
+  }
+
+  .instagram-header {
+    padding: 10px;
+  }
+
+  .instagram-footer {
+    padding: 12px;
+  }
+}
+
               <img src="https://i.ibb.co/JwZMyBkh/Whats-App-Image-2026-09-10-at-07-27-35.jpg" class="carousel-image" alt="Produção 2C 5" loading="lazy">
               <img src="https://i.ibb.co/TMJwccB1/Post-novo-fundo-de-story-de-instagram-branco.png" class="carousel-image" alt="Produção 2C 6" loading="lazy">
               <img src="https://i.ibb.co/fVHb3TrS/Post-Instagram-Carrossel-Ansiedade-Sa-de-Mental-Minimalista-Moderno-Marrom-Bege.png" class="carousel-image" alt="Produção 2C 7" loading="lazy">
