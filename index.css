@@ -1122,4 +1122,40 @@ a:focus-visible {
     padding: 12px;
   }
 }
+/* Correção da janela de visualização dos carrosséis */
+
+.instagram-carousel {
+  min-width: 0;
+}
+
+.instagram-carousel-window {
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  background: #e8e2d8;
+}
+
+.instagram-carousel .carousel-track {
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  overflow: visible;
+  transition: transform 0.35s ease;
+}
+
+.instagram-carousel .carousel-image {
+  display: block;
+  width: 100%;
+  min-width: 100%;
+  height: clamp(300px, 42vw, 520px);
+  flex: 0 0 100%;
+  object-fit: contain;
+  background: #e8e2d8;
+}
+
+@media (max-width: 700px) {
+  .instagram-carousel .carousel-image {
+    height: 360px;
+  }
+}
 
