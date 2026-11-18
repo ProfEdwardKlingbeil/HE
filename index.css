@@ -790,3 +790,336 @@ a:focus-visible {
     transition-duration: 0.01ms !important;
   }
 }
+
+
+/* =========================================================
+   COMPLEMENTOS DE ORGANIZAÇÃO DAS PÁGINAS E GALERIAS
+   Mantém a paleta e a identidade visual original da Revista.
+   ========================================================= */
+
+/* Cabeçalhos das páginas que utilizam a estrutura editorial. */
+.inside-head {
+  padding: 72px max(7vw, calc((100vw - 1120px) / 2));
+  background: var(--navy);
+  color: var(--white);
+}
+
+.inside-head .eyebrow {
+  color: var(--gold);
+}
+
+.inside-head h1 {
+  margin: 0;
+  color: var(--white);
+  font-family: var(--serif);
+  font-size: clamp(3rem, 7vw, 5rem);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+}
+
+.inside-head > p:last-child {
+  max-width: 700px;
+  margin: 20px 0 0;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+/* Textos introdutórios de Artes e Língua Portuguesa. */
+.arts-content,
+.portuguese-introduction {
+  width: min(900px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 58px 0 36px;
+}
+
+.arts-introduction p,
+.portuguese-introduction p {
+  margin: 0 0 20px;
+  color: #46535e;
+  font-size: 0.98rem;
+  line-height: 1.9;
+}
+
+.portuguese-introduction h2,
+.portuguese-introduction h3 {
+  color: var(--navy);
+  font-family: var(--serif);
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.portuguese-introduction h2 {
+  margin: 0 0 24px;
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+}
+
+.portuguese-introduction h3 {
+  margin: 36px 0 16px;
+  font-size: 1.7rem;
+}
+
+/* Galeria de mosaicos: imagens preservadas em uma grade uniforme. */
+.mosaic-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 34px;
+}
+
+.mosaic-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: #e8e2d8;
+  border: 1px solid rgba(16, 42, 67, 0.1);
+}
+
+/* Cartões editoriais no formato de publicação escolar. */
+.instagram-feed {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 28px;
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 10px 0 48px;
+}
+
+#sociologia-view .instagram-feed {
+  grid-template-columns: minmax(0, 680px);
+  justify-content: center;
+}
+
+.instagram-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--white);
+  box-shadow: 0 8px 24px rgba(16, 42, 67, 0.07);
+}
+
+.instagram-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 17px;
+}
+
+.instagram-avatar {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  place-items: center;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  background: var(--cream);
+  color: var(--wine);
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.instagram-user {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  line-height: 1.4;
+}
+
+.instagram-user strong {
+  color: var(--navy);
+  font-size: 0.84rem;
+}
+
+.instagram-user span,
+.instagram-date {
+  color: var(--muted);
+  font-size: 0.72rem;
+}
+
+.instagram-dots {
+  margin-left: auto;
+  color: var(--muted);
+  letter-spacing: 0.12em;
+}
+
+.instagram-carousel {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr) 38px;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+}
+
+.instagram-carousel .carousel-track {
+  min-width: 0;
+  overflow: hidden;
+  background: #e8e2d8;
+}
+
+.instagram-carousel .carousel-image {
+  display: block;
+  width: 100%;
+  height: clamp(300px, 42vw, 520px);
+  flex: 0 0 100%;
+  object-fit: contain;
+  background: #e8e2d8;
+}
+
+.carousel-button {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--cream);
+  color: var(--navy);
+  font-size: 1.45rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.carousel-button:hover {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.instagram-footer {
+  padding: 13px 17px 17px;
+}
+
+.instagram-actions {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: var(--navy);
+  font-size: 1.35rem;
+}
+
+.instagram-actions .bookmark {
+  margin-left: auto;
+}
+
+.instagram-dots-indicator {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 7px;
+  padding: 12px 0;
+}
+
+.instagram-dots-indicator .carousel-dot {
+  width: 7px;
+  height: 7px;
+}
+
+.instagram-likes {
+  margin: 3px 0 8px;
+  color: var(--navy);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.instagram-caption {
+  margin: 0 0 12px;
+  color: #46535e;
+  font-size: 0.82rem;
+  line-height: 1.65;
+}
+
+.instagram-caption strong {
+  margin-right: 5px;
+  color: var(--navy);
+}
+
+.instagram-date {
+  display: inline-block;
+  letter-spacing: 0.12em;
+}
+
+/* Botão de retorno usado nas páginas editoriais. */
+.back-button {
+  display: block;
+  width: fit-content;
+  min-height: 44px;
+  margin: 0 auto 64px;
+  padding: 11px 18px;
+  border: 1px solid var(--navy);
+  border-radius: 2px;
+  background: var(--navy);
+  color: var(--white);
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.back-button:hover {
+  transform: translateY(-2px);
+  background: var(--wine);
+  border-color: var(--wine);
+}
+
+/* Ajustes responsivos das páginas que estavam sem padronização. */
+@media (max-width: 850px) {
+  .instagram-feed {
+    grid-template-columns: minmax(0, 680px);
+    justify-content: center;
+  }
+
+  .mosaic-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .inside-head {
+    padding: 60px 24px;
+  }
+
+  .arts-content,
+  .portuguese-introduction {
+    width: calc(100% - 40px);
+    padding-top: 42px;
+  }
+
+  .mosaic-gallery {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .instagram-feed {
+    width: calc(100% - 24px);
+    gap: 20px;
+  }
+
+  .instagram-carousel {
+    grid-template-columns: 30px minmax(0, 1fr) 30px;
+    gap: 5px;
+    padding: 0 7px;
+  }
+
+  .instagram-carousel .carousel-image {
+    height: 360px;
+  }
+
+  .carousel-button {
+    width: 30px;
+    height: 30px;
+    font-size: 1.2rem;
+  }
+
+  .instagram-header {
+    padding: 12px;
+  }
+
+  .instagram-footer {
+    padding: 12px;
+  }
+}
+
